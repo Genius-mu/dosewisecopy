@@ -1,11 +1,10 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const connectDB = async () => {
   try {
-    const conn = await mongoose.connect(process.env.MONGO_URI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    // No options needed - useNewUrlParser and useUnifiedTopology are deprecated
+    // and enabled by default in MongoDB driver v4.0.0+
+    const conn = await mongoose.connect(process.env.MONGO_URI);
 
     console.log(`MongoDB Connected: ${conn.connection.host}`);
   } catch (error) {
@@ -15,4 +14,3 @@ const connectDB = async () => {
 };
 
 module.exports = connectDB;
-

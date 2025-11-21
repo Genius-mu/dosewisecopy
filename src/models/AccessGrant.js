@@ -1,21 +1,21 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const accessGrantSchema = new mongoose.Schema(
   {
     patientId: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'PatientUser',
+      ref: "PatientUser",
       required: true,
     },
     clinicId: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'ClinicUser',
+      ref: "ClinicUser",
       required: true,
     },
     code: {
       type: String,
       required: true,
-      unique: true,
+      unique: true, // This creates an index automatically, no need for schema.index()
     },
     expiresAt: {
       type: Date,
@@ -32,8 +32,7 @@ const accessGrantSchema = new mongoose.Schema(
 );
 
 // Index for faster lookups
-accessGrantSchema.index({ code: 1 });
+// Note: 'code' field already has unique index from schema definition
 accessGrantSchema.index({ expiresAt: 1 });
 
-module.exports = mongoose.model('AccessGrant', accessGrantSchema);
-
+module.exports = mongoose.model("AccessGrant", accessGrantSchema);
