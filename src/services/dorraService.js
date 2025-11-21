@@ -196,7 +196,7 @@ const aiEmrExtract = async (prompt, dorraPatientId) => {
 const aiCreatePatient = async (patientText) => {
   try {
     const response = await dorraClient.post(DORRA_API.ENDPOINTS.AI_PATIENT, {
-      text: patientText,
+      prompt: patientText, // Changed from 'text' to 'prompt' to match Dorra API
     });
     return response.data;
   } catch (error) {

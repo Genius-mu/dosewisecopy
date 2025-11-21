@@ -888,6 +888,8 @@ Authorization: Bearer <token>
 
 **Endpoint:** `POST /api/ai/patient`
 
+**Description:** Uses Dorra AI to extract patient information from unstructured text and create a patient record.
+
 **Headers:**
 
 ```
@@ -901,6 +903,13 @@ Authorization: Bearer <clinic_token>
   "text": "New patient: Jane Smith, female, born March 12, 1985. Email: jane.smith@email.com. No known allergies. Previous history of asthma."
 }
 ```
+
+**Important Notes:**
+
+- ✅ The backend automatically converts `text` to `prompt` when calling Dorra API
+- ✅ Dorra AI analyzes the text and extracts patient information
+- ✅ Patient is created in both Dorra EMR and local database
+- ✅ Clinic-only endpoint for creating patients from unstructured data
 
 **Response (201):**
 

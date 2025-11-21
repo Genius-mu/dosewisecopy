@@ -139,6 +139,7 @@ dosewise/
 
 - `GET /api/clinic/patient/:id` - Get patient information
 - `POST /api/clinic/encounter` - Create new medical encounter
+- `GET /api/clinic/encounter/:id` - Get encounter by ID (with drug interactions)
 - `POST /api/clinic/prescription/check` - Check drug interactions
 
 ### Access Control (Protected)
@@ -172,10 +173,11 @@ See [POSTMAN_EXAMPLES.md](POSTMAN_EXAMPLES.md) for detailed request/response exa
 - **[QUICKSTART.md](QUICKSTART.md)** - Get started in 5 minutes
 - **[DORRA_INTEGRATION_SUCCESS.md](DORRA_INTEGRATION_SUCCESS.md)** - ✅ **INTEGRATION WORKING!** Test results & proof
 - **[AI_EMR_FIX_SUMMARY.md](AI_EMR_FIX_SUMMARY.md)** - 🤖 **AI EMR Extraction Fixed!** How it works & test results
+- **[DORRA_PHARMAVIGILANCE_UPDATE.md](DORRA_PHARMAVIGILANCE_UPDATE.md)** - 🆕 **PharmaVigilance & Enhanced Data** Drug interactions in encounters
 - **[CLINIC_PATIENT_RELATIONSHIP.md](CLINIC_PATIENT_RELATIONSHIP.md)** - 🏥 **How clinics access patient records** (QR-based access control)
 - **[ARCHITECTURE.md](ARCHITECTURE.md)** - System architecture and data flow diagrams
 - **[DORRA_INTEGRATION.md](DORRA_INTEGRATION.md)** - Complete Dorra EMR API integration guide
-- **[POSTMAN_EXAMPLES.md](POSTMAN_EXAMPLES.md)** - Complete API examples with 19 endpoints
+- **[POSTMAN_EXAMPLES.md](POSTMAN_EXAMPLES.md)** - Complete API examples with 20 endpoints
 - **[TESTING_GUIDE.md](TESTING_GUIDE.md)** - Complete testing workflow
 - **[INTEGRATION_UPDATE_SUMMARY.md](INTEGRATION_UPDATE_SUMMARY.md)** - Latest integration updates
 - **[PROJECT_SUMMARY.md](PROJECT_SUMMARY.md)** - Project overview and completion status
